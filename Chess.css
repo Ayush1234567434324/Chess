@@ -1,0 +1,645 @@
+
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+body
+{
+   height: 100vh;
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(35 35 35) 0%, rgb(19 17 17) 99.4%);
+    font-family: 'Monoton', cursive;
+
+    
+}
+
+
+
+h1 {
+  font-weight: 400;
+  font-size: 100px;
+  text-align: center;
+
+
+}
+
+.chess
+{
+  color:rgb(255, 255, 255);
+  text-shadow:
+0 0 7px #000000,
+0 0 1px #000000,
+0 0 5px #000000,
+0 0 22px rgb(0, 0, 0),
+0 0 10px rgb(0, 0, 0),
+0 0 9px rgb(0, 0, 0),
+0 0 10px rgb(13, 13, 13),
+0 0 15px rgb(21, 21, 21);
+ 
+ 
+}
+
+.rest
+{
+  color:rgb(255, 255, 255);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  font-weight: bold;
+  
+ 
+ 
+}
+.rest.active
+{
+  color: #000000;
+}
+
+.heading
+{
+  font-size:100px;
+  color:#fffafa;
+  text-shadow:
+  0 0 7px #000000,
+  0 0 1px #000000,
+  0 0 5px #000000,
+  0 0 22px rgb(0, 0, 0),
+  0 0 10px rgb(0, 0, 0),
+  0 0 9px rgb(0, 0, 0),
+  0 0 10px rgb(13, 13, 13),
+  0 0 15px rgb(21, 21, 21);
+}
+
+.fa-chess-knight
+{
+  margin-right: 40px;
+}
+.fa-chess-rook
+{
+  margin-left: 40px;
+}
+.toogle
+{
+ margin-left:85%;
+ width: 40px;
+ height: 20px;
+ background-color: white;
+ border-radius: 30px;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ position: relative;
+
+}
+.toogle-icon
+{
+  color:rgb(0 0 0);
+}
+.toogle-icon.active
+{
+ color:rgb(195, 234, 110);
+}
+.toogle-ball
+{
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right : 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+.toogle.active{
+  background-color: black;
+}
+
+.toogle-ball.active{
+  background-color: rgb(250 246 190);
+  transform: translateX(-19px);
+}
+
+body.active
+{
+  background: #e2ffa8cf;
+}
+.chess.active
+{
+  color:rgb(142 231 125);
+  text-shadow:
+0 0 7px #000000,
+0 0 1px #000000,
+0 0 5px #000000,
+0 0 2px rgb(0, 0, 0),
+0 0 1px rgb(0, 0, 0),
+0 0 11px rgb(0, 0, 0),
+0 0 1px rgb(13, 13, 13),
+0 0 1px rgb(21, 21, 21);  
+}
+.indent
+{
+  display: flex;
+}
+
+
+.heading.active
+{
+  
+   color:rgb(142 231 125);
+  text-shadow:
+0 0 7px #000000,
+0 0 1px #000000,
+0 0 5px #000000,
+0 0 2px rgb(0, 0, 0),
+0 0 1px rgb(0, 0, 0),
+0 0 11px rgb(0, 0, 0),
+0 0 1px rgb(13, 13, 13),
+0 0 1px rgb(21, 21, 21);  
+}
+
+.menu
+{
+   text-align: center;
+}
+.button {
+  border-radius: 4px;
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(35 35 35) 0%, rgb(19 17 17) 99.4%);
+  box-shadow:
+    0 0 2px 3px rgb(255 255 255),
+    0 0 1px 1px rgb(255 255 255),
+    0 0 1px 1px #fff; 
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button.active
+{
+  color: #000000;
+  background: #a3f083;
+  box-shadow:
+  0 0 2px 3px rgb(1, 1, 1),
+  0 0 1px 1px rgb(0, 0, 0),
+  0 0 1px 1px rgb(0, 0, 0);
+}
+.cons
+{
+color: white;
+font-size: 30px;
+   
+}
+.pause
+{
+  background-color: rgb(52, 52, 52);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+ 
+
+}
+
+
+.cons:hover
+{
+
+
+color:rgb(255, 255, 255);
+text-shadow:
+0 0 1px #ffffffc1,
+0 0 1px #ffffff,
+0 0 1px #ffffff,
+0 0 1px rgb(255, 255, 255),
+0 0 1px rgb(255, 244, 244),
+0 0 1px rgb(255, 244, 244),
+0 0 1px rgb(255, 255, 255),
+0 0 1px rgb(255, 255, 255);
+   
+}
+
+
+
+.cons.active
+{
+color: rgb(0, 0, 0);
+font-size: 30px;
+
+   
+}
+.cons:hover.active
+{
+   color:rgb(58 213 28);
+
+
+   
+}
+.pause.active
+{
+  background-color: rgb(185 248 133);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+ 
+
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.overlay.active
+{
+
+  background-color: rgb(175 246 63 / 90%);
+
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 28px;
+  
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(111, 111, 111);
+
+  
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 30px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(248, 248, 248);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2d2d2d;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 2px #ffffff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(40px);
+  -ms-transform: translateX(40px);
+  transform: translateX(40px);
+}
+.onoff
+{
+  color:white;
+  font-weight: solid;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.slider.active
+{
+  background-color: rgb(122, 215, 115);
+}
+
+input:focus + .slider.active {
+  box-shadow: 0 0 2px #000000;
+}
+input:checked + .slider.active {
+  background-color: #f7ff88;
+}
+.onoff.active
+{
+  color:#000000;
+}
+
+.exit
+{
+
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 40px;
+   color: #fff;
+   font-weight: solid;
+
+
+}
+.closed
+{
+  display: flex;
+  margin-top:5%;
+  margin-left:35%;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                         */
+
+
+ @media only screen and (max-width:1050px)
+{
+
+
+
+
+
+ 
+ h1
+  {
+     font-size: 80px;
+  }
+
+.heading
+ {
+   font-size: 100px;
+ }
+ .closed
+ {
+  margin-left:30%;
+ }
+
+
+}
+
+
+
+@media only screen and (max-width:800px)
+{
+
+ .pause
+ {
+  height:30px;
+   width:30px;
+ }
+  .cons
+ {
+  font-size:18px;
+ }
+  .pause.active
+ {
+  height:30px;
+   width:30px;
+ }
+  .cons.active
+ {
+  font-size:18px;
+ }
+  h1
+  {
+     font-size: 40px;
+  }
+   .rest
+  {
+    font-size: 20px; 
+  }
+  .heading
+  {
+         font-size: 50px;
+    
+  }
+  .fa-chess-knight
+{
+  margin-right: 10px;
+}
+.fa-chess-rook
+{
+  margin-left: 10px;
+}
+ .toogle
+ {
+  margin-left:70%
+ }
+ .exit
+ {
+  font-size: 30px;
+ }
+  .closed
+  {
+    display: initial;
+   margin:0%;
+  
+  }
+}
+@media only screen and (max-width:700px)
+{
+ 
+ .toogle
+ {
+  margin-left:70%
+ }
+  
+}
+
+@media only screen and (max-width:350px)
+{
+  h1
+  {
+     font-size: 30px;
+  }
+   .heading
+ {
+  font-size:40px;
+ }
+ .exit
+ {
+  font-size: 20px;
+ }
+ .closed
+ {
+    margin-left:10%;
+ }
+}
+

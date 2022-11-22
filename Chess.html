@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess - Infinity and beyond</title>
+    <link rel="stylesheet" href="Chess.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   
+<body>
+    <div class="indent">
+        <div class="play">
+        <button class="pause"><i onclick="myFunction()" id="player"   class="cons fa fa-play"></i></button>
+        </div>
+    <div class="toogle">
+        <i class="fas fa-sun toogle-icon"></i>
+        <i class="fas fa-moon toogle-icon"></i>
+        <div id="ball" class="toogle-ball"></div>
+    </div>
+    </div>
+   
+    <h1> <i class='heading fas fa-chess-knight'></i><span class="chess">C&nbsp;H&nbsp;E&nbsp;S&nbsp;S</span> <i class='heading fas fa-chess-rook'></i><div id="typing" class = "rest">Infinity and Beyond</div></h1>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+           <div><span class="onoff" id="onoff" >Sound off</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><label class="switch">
+            <input type="checkbox" checked>
+            <span onclick="onoff()" class="slider"></span></a>  
+          </label><br><br>
+        </div>
+        <div class="overlay-content">
+            <div><span class="onoff" id="Mode" >Night-mode</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><label class="switch">
+             <input type="checkbox" checked>
+             <span onclick="Mode()" class="slider"></span></a>  
+           </label><br><br>
+         </div>
+        </div>
+        </div>
+      </div>
+      <div id="myNavtwo" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <span class="exit">Are you sure to quit?</span>
+          <div class="closed">
+          <div><button onclick="myclick8()" id="button7" class="button"><span>Yes</span></button></div>
+          <div><button onclick="myclick9()" id="button6" class="button"><span>No</span></button></div>
+        </div>
+      </div>
+      </div>
+    <div class="menu">
+        <div><button onclick="myclick1()" id="button1" class="button"><span>New Game</span></button></div>
+        <div><button onclick="myclick2()" id="button2" class="button"><span>Continue</span></button></div>
+        <div><button onclick="myclick3()" id="button3" class="button"> <span>Settings</span></button></div>
+        <div ><button onclick="myclick_4()" id="button4" class="button"><span>Quit</span></button></div>
+    </div>
+
+      
+
+    <script src="Chess.js"></script>
+</body>
+</html>
